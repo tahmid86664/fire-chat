@@ -5,7 +5,7 @@ import './login.css';
 // @ant-design icons
 import { GoogleOutlined, FacebookOutlined } from '@ant-design/icons';
 
-import { auth, googleProvider } from '../../firebase';
+import { auth, googleProvider, facebookProvider } from '../../firebase';
 
 const Login = () => {
   
@@ -13,6 +13,12 @@ const Login = () => {
     auth.signInWithPopup(googleProvider).then((result) => {
       console.log(result.user);
     }).catch(err => console.log("Google sign in error"));
+  }
+
+  const signInWithFacebook = () => {
+    auth.signInWithPopup(facebookProvider).then((result) => {
+      console.log(result.user);
+    }).catch(err => console.log("facebook sign in error ", err));
   }
 
   return (
@@ -24,7 +30,9 @@ const Login = () => {
         >
             <GoogleOutlined /> Sign in with Google
         </div>
-        <div className="login__button facebook">
+        <div className="login__button facebook"
+          onClick={signInWithFacebook}
+        >
           <FacebookOutlined /> Sign in with Facebook
         </div>
       </div>
