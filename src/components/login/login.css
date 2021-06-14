@@ -49,3 +49,9 @@
 }
 
 
+@media screen and (max-width: 460px) {
+  .login__card {
+    width: 65%;
+    margin: 0px 15px;
+  }
+}
