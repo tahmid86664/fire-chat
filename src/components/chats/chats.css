@@ -1,0 +1,21 @@
+.chats__navbar {
+  display: flex;
+  height: 66px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-image: linear-gradient(to right, #ffbb00, #d4a011);
+  padding: 0px 50px;
+  color: white;
+}
+
+.chats__logo {
+  font-weight: 750;
+  font-size: 2rem;
+}
+
+.chats__logout {
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
